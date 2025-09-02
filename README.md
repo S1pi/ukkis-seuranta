@@ -15,17 +15,31 @@ ukkis-seuranta/
 
 ## Getting Started
 
-1. **Install dependencies:**
+1. **Install all dependencies:**
 
    ```bash
-   npm install
+   npm install or npm i
    ```
+
+   This installs dependencies for root, frontend, and backend.
 
 2. **Start development servers:**
    ```bash
    npm run dev
    ```
    This starts both frontend (http://localhost:3000) and backend development servers.
+
+## Installation Options
+
+```bash
+npm install             # Install all workspace dependencies
+npm run install:all     # Same as above
+npm run install:root    # Install only root dependencies
+
+# Install for specific workspace:
+cd frontend && npm install  # Frontend only
+cd backend && npm install   # Backend only
+```
 
 ## Available Scripts
 
