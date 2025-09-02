@@ -18,7 +18,13 @@ ukkis-seuranta/
 1. **Install all dependencies:**
 
    ```bash
-   npm install or npm i
+   npm i
+   ```
+
+   OR
+
+   ```bash
+   npm install
    ```
 
    This installs dependencies for root, frontend, and backend.
