@@ -1,0 +1,30 @@
+{
+  "name": "ukkis-seuranta-backend",
+  "version": "1.0.0",
+  "description": "Backend for Ukkis Seuranta application",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src/**/*.{ts,js}"
+  },
+  "keywords": [
+    "backend",
+    "api",
+    "typescript",
+    "node"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0",
+    "eslint": "^9"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

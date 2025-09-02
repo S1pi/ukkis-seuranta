@@ -1,49 +1,54 @@
-# Backend README
+# Backend
 
-This is a simple backend service built with [Fastify](https://www.fastify.io/), using ES Modules (ESM) syntax.
+## Ukkis Seuranta Backend
 
-## Getting Started
+This is the backend for the Ukkis Seuranta application.
+
+### Tech Stack
+
+- **Node.js** - JavaScript runtime
+- **TypeScript** - Type-safe JavaScript
+- **Fastify** - (To be added) Web framework
+
+### Getting Started
 
 1. **Install dependencies:**
 
-```bash
-npm install
+   ```bash
+   npm install
+   ```
+
+2. **Start development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+3. **Build for production:**
+
+   ```bash
+   npm run build
+   ```
+
+4. **Start production server:**
+   ```bash
+   npm start
+   ```
+
+### Available Scripts
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build the application for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+### Project Structure
+
 ```
-
-2. **Run the server:**
-
-```bash
-npm start
-```
-
-## Project Structure
-
-- `index.js` — Main entry point
-- `routes/` — API route definitions
-
-## Scripts
-
-- `npm start` — Start the Fastify server
-- `npm run dev` — Start with auto-reload (if using nodemon)
-
-## Requirements
-
-- Node.js >= 16
-- `"type": "module"` in your `package.json`
-
-## Example
-
-```js
-import Fastify from "fastify";
-
-const fastify = Fastify();
-
-fastify.get("/", async (request, reply) => {
-  return { hello: "world" };
-});
-
-fastify.listen({ port: 3000 }, (err) => {
-  if (err) throw err;
-  console.log("Server listening on http://localhost:3000");
-});
+backend/
+├── src/
+│   └── index.ts         # Application entry point
+├── dist/                # Compiled JavaScript (generated)
+├── package.json         # Dependencies and scripts
+└── tsconfig.json        # TypeScript configuration
 ```

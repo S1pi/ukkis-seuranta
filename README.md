@@ -1,46 +1,55 @@
-# Ukkis seurantajärjestelmä
+# Ukkis Seuranta
 
-## Overview
-
-This repository contains the **ukkis-seuranta** project, which is structured as a monorepo with separate frontend and backend applications. Each part of the project is located in its respective folder.
+A monorepo with frontend (Next.js) and backend (Express.js) applications.
 
 ## Project Structure
 
 ```
-.
-├── frontend/
-│   └── ... (React app, documentation, etc.)
-├── backend/
-│   └── ... (API, server logic, documentation, etc.)
-├── README.md
-└── ...
+ukkis-seuranta/
+├── frontend/           # Next.js React application
+├── backend/            # Node.js backend (Fastify - to be added)
+├── package.json        # Root package.json with workspace scripts
+├── tsconfig.json       # TypeScript configuration
+├── eslint.config.mjs   # ESLint configuration
+├── .prettierrc         # Prettier configuration
+└── .editorconfig       # Editor configuration
 ```
-
-- **frontend/**: Contains the client-side application. See `frontend/README.md` for setup and usage instructions.
-- **backend/**: Contains the server-side application. See `backend/README.md` for setup and API documentation.
 
 ## Getting Started
 
-1. **Clone the repository:**
+1. **Install dependencies:**
+
+   ```bash
+   npm install
+   cd frontend && npm install
+   cd ../backend && npm install
+   ```
+
+2. **Start development servers:**
+   ```bash
+   # From root directory
+   npm run dev
+   ```
+   This starts both frontend (http://localhost:3000) and backend (http://localhost:3001)
+
+## Available Scripts
 
 ```bash
-git clone <repository-url>
-cd ukkis-seuranta
+npm run dev             # Start both frontend and backend
+npm run build           # Build both applications
+npm run lint            # Lint both applications
+
+# Individual project scripts
+npm run dev:frontend    # Start frontend only
+npm run dev:backend     # Start backend only
+npm run build:frontend  # Build frontend only
+npm run build:backend   # Build backend only
+npm run lint:frontend   # Lint frontend only
+npm run lint:backend    # Lint backend only
 ```
 
-2. **Install dependencies for each part:**
+## Tech Stack
 
-- Frontend: See `frontend/README.md`
-- Backend: See `backend/README.md`
-
-3. **Run the applications:**
-
-- Follow the instructions in each folder's README to start the frontend and backend.
-
-## Contributing
-
-Contributions are welcome! Please open issues or pull requests as needed.
-
-## License
-
-This project is licensed under the MIT License.
+- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS
+- **Backend**: Node.js, TypeScript (Fastify to be added later)
+- **Tools**: ESLint, Prettier, EditorConfig
