@@ -1,34 +1,26 @@
-# Shared Code
+# Shared
 
-This directory contains shared code between the frontend and backend applications.
-
-## Contents
-
-- `types.ts` - Shared TypeScript type definitions
-- `constants.ts` - Shared constants and configuration values
-- `utils.ts` - Shared utility functions
+Shared TypeScript types and constants used by both frontend and backend.
 
 ## Usage
 
-### In Backend
+Import from both frontend and backend using the path alias:
 
 ```typescript
-import { User, ApiResponse } from '../shared/types';
-import { API_ENDPOINTS } from '../shared/constants';
-import { createApiResponse } from '../shared/utils';
+// Import types
+import { Test } from '@/shared/types';
+
+// Import constants
+import { PAGINATION, VALIDATION } from '@/shared/constants';
 ```
 
-### In Frontend
+## Files
 
-```typescript
-import { User, ApiResponse } from '../shared/types';
-import { API_ENDPOINTS } from '../shared/constants';
-import { isValidEmail } from '../shared/utils';
-```
+- `types.ts` - Shared TypeScript type definitions
+- `constants.ts` - Shared constants and configuration values
 
-## Guidelines
+## Adding New Shared Code
 
-- Only add code that is truly shared between frontend and backend
-- Keep dependencies minimal (prefer native JavaScript/TypeScript)
-- Ensure all code is environment-agnostic (works in both Node.js and browser)
-- Document all exports with JSDoc comments
+1. Add your types to `types.ts`
+2. Add your constants to `constants.ts`
+3. Both frontend and backend will automatically have access via `@/shared/*` imports

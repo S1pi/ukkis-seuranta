@@ -1,16 +1,8 @@
 # Backend
 
-## Ukkis Seuranta Backend
+Node.js backend application for Ukkis Seuranta.
 
-This is the backend for the Ukkis Seuranta application.
-
-### Tech Stack
-
-- **Node.js** - JavaScript runtime
-- **TypeScript** - Type-safe JavaScript
-- **Fastify** - (To be added) Web framework
-
-### Getting Started
+## Getting Started
 
 1. **Install dependencies:**
 
@@ -35,14 +27,23 @@ This is the backend for the Ukkis Seuranta application.
    npm start
    ```
 
-### Available Scripts
+## Available Scripts
 
 - `npm run dev` - Start development server with hot reload
 - `npm run build` - Build the application for production
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint
 
-### Project Structure
+## Shared Code
+
+Import shared types and constants using the path alias:
+
+```typescript
+import { Test } from '@/shared/types';
+import { PAGINATION } from '@/shared/constants';
+```
+
+## Project Structure
 
 ```
 backend/
@@ -52,3 +53,8 @@ backend/
 ├── package.json         # Dependencies and scripts
 └── tsconfig.json        # TypeScript configuration
 ```
+
+## Tech Stack
+
+- Node.js
+- TypeScript

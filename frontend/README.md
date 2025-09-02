@@ -1,31 +1,40 @@
 # Frontend
 
-This is the frontend for the project.
+Next.js frontend application for Ukkis Seuranta.
 
 ## Getting Started
 
-1. Install dependencies:
+1. **Install dependencies:**
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-2. Start the development server:
+2. **Start development server:**
+   ```bash
+   npm run dev
+   ```
+   Opens at http://localhost:3000
 
-```bash
-npm start
-```
+## Available Scripts
 
-## Project Structure
-
-- `src/` - Source code
-- `public/` - Static files
-
-## Scripts
-
-- `npm start` - Run development server
+- `npm run dev` - Start development server
 - `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-## License
+## Shared Code
 
-MIT
+Import shared types and constants using the path alias:
+
+```typescript
+import { Test } from '@/shared/types';
+import { PAGINATION } from '@/shared/constants';
+```
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS

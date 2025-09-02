@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "rm -rf dist && tsc",
-    "start": "node dist/backend/src/index.js",
+    "start": "node dist/src/index.js",
     "lint": "eslint src/**/*.{ts,js}"
   },
   "keywords": [

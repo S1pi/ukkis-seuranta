@@ -1,18 +1,16 @@
 # Ukkis Seuranta
 
-A monorepo with frontend (Next.js) and backend (Express.js) applications.
+A basic monorepo with frontend (Next.js) and backend (Node.js) applications.
 
 ## Project Structure
 
 ```
 ukkis-seuranta/
 ├── frontend/           # Next.js React application
-├── backend/            # Node.js backend (Fastify - to be added)
+├── backend/            # Node.js backend with TypeScript
+├── shared/             # Shared types and constants
 ├── package.json        # Root package.json with workspace scripts
-├── tsconfig.json       # TypeScript configuration
-├── eslint.config.mjs   # ESLint configuration
-├── .prettierrc         # Prettier configuration
-└── .editorconfig       # Editor configuration
+└── README.md           # This file
 ```
 
 ## Getting Started
@@ -21,16 +19,13 @@ ukkis-seuranta/
 
    ```bash
    npm install
-   cd frontend && npm install
-   cd ../backend && npm install
    ```
 
 2. **Start development servers:**
    ```bash
-   # From root directory
    npm run dev
    ```
-   This starts both frontend (http://localhost:3000) and backend (http://localhost:3001)
+   This starts both frontend (http://localhost:3000) and backend development servers.
 
 ## Available Scripts
 
@@ -48,8 +43,16 @@ npm run lint:frontend   # Lint frontend only
 npm run lint:backend    # Lint backend only
 ```
 
+## Shared Code
+
+The `shared/` directory contains TypeScript types and constants that are used by both frontend and
+backend:
+
+- Import in backend: `import { Test } from '@/shared/types';`
+- Import in frontend: `import { Test } from '@/shared/types';`
+
 ## Tech Stack
 
 - **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS
-- **Backend**: Node.js, TypeScript (Fastify to be added later)
-- **Tools**: ESLint, Prettier, EditorConfig
+- **Backend**: Node.js, TypeScript
+- **Tools**: ESLint, Prettier, npm workspaces
