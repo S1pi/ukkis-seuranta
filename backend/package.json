@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
+    "build": "rm -rf dist && tsc",
+    "start": "node dist/backend/src/index.js",
     "lint": "eslint src/**/*.{ts,js}"
   },
   "keywords": [
